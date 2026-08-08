@@ -13,6 +13,9 @@ MIN_VALID_SIZE = 100_000
 PROJECT_ID = os.environ["FIREBASE_PROJECT_ID"].strip()
 API_KEY = os.environ["FIREBASE_API_KEY"].strip()
 
+# GEÇİCİ TEŞHİS: PROJECT_ID gizli değil, API_KEY'e dokunmuyor.
+print(f"DEBUG PROJECT_ID={PROJECT_ID!r} len={len(PROJECT_ID)} api_key_len={len(API_KEY)}")
+
 BASE = (
     f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}"
     f"/databases/(default)/documents/{COLLECTION}"
