@@ -10,8 +10,8 @@ CHUNK_SIZE = 700000
 COLLECTION = "vpngate_list"
 MIN_VALID_SIZE = 100_000
 
-PROJECT_ID = os.environ["FIREBASE_PROJECT_ID"]
-API_KEY = os.environ["FIREBASE_API_KEY"]
+PROJECT_ID = os.environ["FIREBASE_PROJECT_ID"].strip()
+API_KEY = os.environ["FIREBASE_API_KEY"].strip()
 
 BASE = (
     f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}"
